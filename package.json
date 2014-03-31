@@ -1,0 +1,21 @@
+{
+  "name": "wcag-validator",
+  "version": "0.0.1",
+  "description": "Checks web accessibility for a webpage using achecker.ca",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/zrrrzzt/wcag-validator.git"
+  },
+  "bugs": {
+    "url": "http://github.com/zrrrzzt/wcag-validator/issues"
+  },
+  "author": "Geir Gåsodden <geir.gasodden@pythonia.no>",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.34.0"
+  }
+}
