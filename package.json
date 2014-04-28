@@ -1,11 +1,25 @@
 {
   "name": "wcag-validator",
   "version": "0.0.1",
-  "description": "Checks web accessibility for a webpage using achecker.ca",
-  "main": "index.js",
-  "scripts": {
-    "test": ""
+  "description": "Check accessibility using achecker.ca",
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no"
   },
+  "main": "index.js",
+  "bin":{
+    "wcag":"cli.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec test/*.js"
+  },
+  "files":[
+    "index.js",
+    "cli.js"
+  ],
   "repository": {
     "type": "git",
     "url": "http://github.com/zrrrzzt/wcag-validator.git"
@@ -13,7 +27,6 @@
   "bugs": {
     "url": "http://github.com/zrrrzzt/wcag-validator/issues"
   },
-  "author": "Geir Gåsodden <geir.gasodden@pythonia.no>",
   "license": "MIT",
   "dependencies": {
     "request": "^2.34.0"
