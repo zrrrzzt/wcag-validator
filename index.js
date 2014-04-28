@@ -20,11 +20,11 @@ module.exports = function(opts, callback){
   if(!opts.uri){
     return callback(new Error('Missing required param: uri'), null);
   }
-/*
+
   if(!opts.id){
-    return callback(new Error('Missing required params.'), null);
+    return callback(new Error('Missing required param: id'), null);
   }
-*/
+
   var reqOpts = mkReqOpts(opts);
 
   request(reqOpts, function(error, response, body){
