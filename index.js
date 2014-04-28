@@ -17,10 +17,14 @@ function mkReqOpts(opts){
 
 module.exports = function(opts, callback){
 
-  if(!opts.uri || !opts.id){
+  if(!opts.uri){
+    return callback(new Error('Missing required param: uri'), null);
+  }
+/*
+  if(!opts.id){
     return callback(new Error('Missing required params.'), null);
   }
-
+*/
   var reqOpts = mkReqOpts(opts);
 
   request(reqOpts, function(error, response, body){
