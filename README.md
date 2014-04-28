@@ -1,19 +1,25 @@
-#wcag-validator#
+#wcag-validator [![Build Status](https://travis-ci.org/zrrrzzt/wcag-validator.svg?branch=master)](https://travis-ci.org/zrrrzzt/wcag-validator)
 
-A Node.js module for checking web accessibility using achecker.ca.
+A Node.js module/CLI app for checking web accessibility using achecker.ca.
 
 In order to use this module you must supply a Web Service ID from achecker.
 You can register for free at [http://achecker.ca/](http://achecker.ca/)
 
 This module implements the Accessibility validation review from [Achecker Web Service API](http://achecker.ca/documentation/web_service_api.php).
 
-##Installation##
+##Installation
 
 ```
 $ npm install wcag-validator
 ```
 
-##Usage##
+or globally for CLI app
+
+```
+$ npm install wcag-validator -g
+```
+
+##Usage - module
 
 Create an options object.
 
@@ -39,4 +45,16 @@ validator(opts, function(err, result){
 
   console.log(result);
 });
+```
+
+##Usage - CLI app
+
+```
+$ wcag-validator --uri=<uri to validate> --id=<achecker id>
+```
+
+optional options
+
+```
+wcag-validator --uri=<uri to validate> --id=<achecker id> --output=<output> --guide=<guide> --offset=<offset>
 ```
