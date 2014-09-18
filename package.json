@@ -29,7 +29,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "minimist": "0.0.8",
+    "minimist": "^1.1.0",
     "request": "^2.42.0"
   },
   "devDependencies": {
