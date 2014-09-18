@@ -50,11 +50,11 @@ validator(opts, function(err, result){
 ##Usage - CLI app
 
 ```
-$ wcag-validator --uri=<uri to validate> --id=<achecker id>
+$ wcag-validator <uri to validate> --id=<achecker id>
 ```
 
-optional options
+Optional
 
 ```
-wcag-validator --uri=<uri to validate> --id=<achecker id> --output=<output> --guide=<guide> --offset=<offset>
+$ wcag-validator <uri to validate> --id=<achecker id> --output=<output> --guide=<guide> --offset=<offset>
 ```
