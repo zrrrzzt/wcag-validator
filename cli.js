@@ -30,6 +30,10 @@ if (process.argv.indexOf('-v') !== -1 || process.argv.indexOf('--version') !== -
   return;
 }
 
+if(query.indexOf('http') !== -1) {
+  opts.uri = argv._[0];
+}
+
 if(argv.uri){
   opts.uri = argv.uri;
 }
