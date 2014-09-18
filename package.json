@@ -21,6 +21,12 @@
     "index.js",
     "cli.js"
   ],
+  "keywords": [
+    "wcag",
+    "validation",
+    "achecker",
+    "web accessibility"
+  ],
   "repository": {
     "type": "git",
     "url": "http://github.com/zrrrzzt/wcag-validator.git"
