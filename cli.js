@@ -17,7 +17,7 @@ function printHelp() {
   console.log('');
   console.log('Optional params');
   console.log('See http://achecker.ca/documentation/web_service_api.php for more');
-  console.log('  $ html-validate --url=<url> --id=<id> --output=<output> --guide=<guide> --offset=<offset>');
+  console.log('  $ wcag-validator --url=<url> --id=<id> --output=<output> --guide=<guide> --offset=<offset>');
 }
 
 if (!query || process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1) {
