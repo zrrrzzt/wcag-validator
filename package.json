@@ -30,7 +30,8 @@
   "license": "MIT",
   "dependencies": {
     "minimist": "^1.1.0",
-    "request": "^2.42.0"
+    "request": "^2.42.0",
+    "valid-url": "^1.0.9"
   },
   "devDependencies": {
     "mocha": "^1.21.4"
