@@ -23,7 +23,7 @@ module.exports = function(opts, callback){
     return callback(new Error('Missing required param: uri'), null);
   }
 
-  if(opts.uri && !validUrl.isWebUri(opts.url)){
+  if(opts.uri && !validUrl.isWebUri(opts.uri)){
     return callback(new Error('Invalid url'), null);
   }
 
