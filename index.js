@@ -1,9 +1,10 @@
-var request = require('request')
-  , validUrl = require('valid-url')
-  ;
+'use strict';
 
-function mkReqOpts(opts){
-  var newOpts = {
+var request = require('request');
+var validUrl = require('valid-url');
+
+function mkReqOpts(opts) {
+  return {
     uri: 'http://achecker.ca/checkacc.php',
     qs: {
       uri:opts.uri,
@@ -12,31 +13,29 @@ function mkReqOpts(opts){
       guide: opts.guide || 'WCAG2-AA',
       offset: opts.offset || 0
     }
-  }
-
-  return newOpts;
+  };
 }
 
-module.exports = function(opts, callback){
+module.exports = function(opts, callback) {
 
-  if(!opts.uri){
+  if (!opts.uri) {
     return callback(new Error('Missing required param: uri'), null);
   }
 
-  if(opts.uri && !validUrl.isWebUri(opts.uri)){
+  if (opts.uri && !validUrl.isWebUri(opts.uri)) {
     return callback(new Error('Invalid url'), null);
   }
 
-  if(!opts.id){
+  if (!opts.id) {
     return callback(new Error('Missing required param: id'), null);
   }
 
   var reqOpts = mkReqOpts(opts);
 
-  request(reqOpts, function(error, response, body){
-    if(error) {
+  request(reqOpts, function(error, response, body) {
+    if (error) {
       return callback(error, null);
     }
     return callback(null, body);
   });
-}
+};
