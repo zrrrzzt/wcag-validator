@@ -37,7 +37,7 @@
   "license": "MIT",
   "dependencies": {
     "minimist": "^1.1.1",
-    "request": "^2.42.0",
+    "request": "^2.55.0",
     "valid-url": "^1.0.9"
   },
   "devDependencies": {
