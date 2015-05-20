@@ -17,10 +17,6 @@
   "scripts": {
     "test": "mocha --reporter spec test/*.js"
   },
-  "files": [
-    "index.js",
-    "cli.js"
-  ],
   "keywords": [
     "wcag",
     "validation",
