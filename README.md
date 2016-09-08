@@ -28,7 +28,7 @@ Create an options object.
 
 **id** Your web service ID from Achecker (required)
 
-**output** Output format of report. Deafults to 'html' can be set to 'rest'
+**output** Output format of report. Defaults to 'html' can be set to 'rest'
 
 **guide** Guidelines to validate against. Defaults to 'WCAG2-AA'. Alternatives: 'BITV1', '508', 'STANCA', 'WCAG1-A', 'WCAG1-AA', 'WCAG1-AAA', 'WCAG2-A', 'WCAG2-AA', 'WCAG2-AAA'. For multiple guidelines separate with comma.
 
