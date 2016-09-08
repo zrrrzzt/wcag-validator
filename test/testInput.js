@@ -1,55 +1,38 @@
-var wcag = require('../index')
-  , assert = require('assert')
-  ;
+'use strict'
 
-describe('wcag - inputs', function(){
+const tap = require('tap')
+const wcag = require('../index')
 
-  it('Should throw if param uri is not supplied', function(done){
-    var opts = {id:'12345'};
-    wcag(opts, function(err, data){
-      assert.throws(function(){
-          if(err) throw err;
-        }, function(err){
-          if((err instanceof Error) && /Missing required param: uri/.test(err)){
-            return true
-          }
-        },
-        "Unexpected error"
-      );
-      done();
-    });
-  });
+tap.test('It returns error if param uri is not supplied', test => {
+  const options = {
+    id: '12345'
+  }
+  const expectedErrorMessage = 'Missing required param: uri'
+  wcag(options, (error, data) => {
+    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+    test.done()
+  })
+})
 
-  it('Should throw if param uri contains invalid url', function(done){
-    var opts = {id:'12345', uri:'pysje'};
-    wcag(opts, function(err, data){
-      assert.throws(function(){
-          if(err) throw err;
-        }, function(err){
-          if((err instanceof Error) && /Invalid url/.test(err)){
-            return true
-          }
-        },
-        "Unexpected error"
-      );
-      done();
-    });
-  });
+tap.test('It returns error if param uri contains invalid url', test => {
+  const options = {
+    id: '12345',
+    uri: 'pysje'
+  }
+  const expectedErrorMessage = 'Invalid url'
+  wcag(options, (error, data) => {
+    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+    test.done()
+  })
+})
 
-  it('Should throw if param id is not supplied', function(done){
-    var opts = {uri:'https://github.com/zrrrzzt'};
-    wcag(opts, function(err, data){
-      assert.throws(function(){
-          if(err) throw err;
-        }, function(err){
-          if((err instanceof Error) && /Missing required param: id/.test(err)){
-            return true
-          }
-        },
-        "Unexpected error"
-      );
-      done();
-    });
-  });
-
-});
+tap.test('It returns error if param id is not supplied', test => {
+  const options = {
+    uri: 'https://github.com/zrrrzzt'
+  }
+  const expectedErrorMessage = 'Missing required param: id'
+  wcag(options, (error, data) => {
+    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+    test.done()
+  })
+})
