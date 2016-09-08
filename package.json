@@ -36,9 +36,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "minimist": "^1.1.1",
-    "request": "^2.55.0",
-    "valid-url": "^1.0.9"
+    "minimist": "1.2.0",
+    "request": "2.74.0",
+    "valid-url": "1.0.9"
   },
   "devDependencies": {
     "coveralls": "2.11.12",
