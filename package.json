@@ -1,6 +1,6 @@
 {
   "name": "wcag-validator",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Check accessibility using achecker.ca",
   "author": {
     "name": "Geir Gåsodden",
@@ -12,7 +12,7 @@
     "wcag-validator": "cli.js"
   },
   "engines": {
-    "node": ">=4.5.0"
+    "node": ">=4.6.1"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/*.js",
