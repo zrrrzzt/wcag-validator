@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/zrrrzzt/wcag-validator.svg?branch=master)](https://travis-ci.org/zrrrzzt/wcag-validator)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+
 # wcag-validator
 
 A Node.js module/CLI app for checking web accessibility using achecker.ca.
@@ -38,7 +39,7 @@ Create an options object.
 ```JavaScript
 const validator = require('wcag-validator')
 const options = {
-  uri : 'http://uri-to-validate.com',
+  uri : 'https://uri-to-validate.com',
   id : 'your-webservice-id-from-achecker'
 }
 
@@ -63,4 +64,5 @@ $ wcag-validator <uri to validate> --id=<achecker id> --output=<output> --guide=
 ```
 
 ## License
+
 [MIT](LICENSE)
