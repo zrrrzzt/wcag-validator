@@ -12,7 +12,7 @@
     "wcag-validator": "cli.js"
   },
   "engines": {
-    "node": ">=4.6.1"
+    "node": ">=8.15.0"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/*.js",
@@ -29,10 +29,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/zrrrzzt/wcag-validator.git"
+    "url": "git+https://github.com/zrrrzzt/wcag-validator.git"
   },
   "bugs": {
-    "url": "http://github.com/zrrrzzt/wcag-validator/issues"
+    "url": "https://github.com/zrrrzzt/wcag-validator/issues"
   },
   "license": "MIT",
   "dependencies": {
