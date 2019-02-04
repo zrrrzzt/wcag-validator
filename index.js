@@ -1,40 +1,37 @@
-'use strict'
+const querystring = require('querystring')
+const axios = require('axios')
+const validUrl = require('valid-url')
+const uri = 'https://achecker.ca/checkacc.php'
 
-var request = require('request')
-var validUrl = require('valid-url')
-
-function mkReqOpts (opts) {
-  return {
-    uri: 'https://achecker.ca/checkacc.php',
-    qs: {
-      uri: opts.uri,
-      id: opts.id,
-      output: opts.output || 'html',
-      guide: opts.guide || 'WCAG2-AA',
-      offset: opts.offset || 0
-    }
+function makeUrl (options) {
+  const query = {
+    uri: options.uri,
+    id: options.id,
+    output: options.output || 'html',
+    guide: options.guide || 'WCAG2-AA',
+    offset: options.offset || 0
   }
+  return `${uri}?${querystring.stringify(query)}`
 }
 
-module.exports = function (opts, callback) {
-  if (!opts.uri) {
-    return callback(new Error('Missing required param: uri'), null)
+module.exports = async function (options) {
+  if (!options.uri) {
+    throw new Error('Missing required param: uri')
   }
 
-  if (opts.uri && !validUrl.isWebUri(opts.uri)) {
-    return callback(new Error('Invalid url'), null)
+  if (options.uri && !validUrl.isWebUri(options.uri)) {
+    throw new Error('Invalid url')
   }
 
-  if (!opts.id) {
-    return callback(new Error('Missing required param: id'), null)
+  if (!options.id) {
+    throw new Error('Missing required param: id')
   }
 
-  var reqOpts = mkReqOpts(opts)
-
-  request(reqOpts, function (error, response, body) {
-    if (error) {
-      return callback(error, null)
-    }
-    return callback(null, body)
-  })
+  try {
+    const url = makeUrl(options)
+    const { data } = await axios(url)
+    return data
+  } catch (error) {
+    throw error
+  }
 }

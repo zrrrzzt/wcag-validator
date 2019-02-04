@@ -37,18 +37,20 @@ Create an options object.
 **offset** The line offset to begin validation on the html output from URI.. Defaults to 0.
 
 ```JavaScript
-const validator = require('wcag-validator')
-const options = {
-  uri : 'https://uri-to-validate.com',
-  id : 'your-webservice-id-from-achecker'
-}
-
-validator(options, (err, result) => {
-  if (err) {
-    throw err
+(async () => {
+  const validator = require('wcag-validator')
+  const options = {
+    uri : 'https://uri-to-validate.com',
+    id : 'your-webservice-id-from-achecker'
   }
-  console.log(result)
-})
+
+  try {
+    const result = await validator(options)
+    console.log(result)
+  } catch (error) {
+    console.error(error)
+  }
+})()
 ```
 
 ## Usage - CLI app
@@ -62,6 +64,24 @@ Optional
 ```sh
 $ wcag-validator <uri to validate> --id=<achecker id> --output=<output> --guide=<guide> --offset=<offset>
 ```
+
+## Usage - npx
+
+```sh
+$ npx wcag-validator <uri to validate> --id=<achecker id>
+```
+
+Optional
+
+```sh
+$ npx wcag-validator <uri to validate> --id=<achecker id> --output=<output> --guide=<guide> --offset=<offset>
+```
+
+## Local development
+
+achecker needs access to your site to be able to perform the tests.
+
+If you are doing local development you can use [ngrok](https://ngrok.com/), [localtunnel](https://www.npmjs.com/package/localtunnel) or similar solutions.
 
 ## License
 
