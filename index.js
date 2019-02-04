@@ -5,7 +5,7 @@ var validUrl = require('valid-url')
 
 function mkReqOpts (opts) {
   return {
-    uri: 'http://achecker.ca/checkacc.php',
+    uri: 'https://achecker.ca/checkacc.php',
     qs: {
       uri: opts.uri,
       id: opts.id,

@@ -15,7 +15,7 @@ function printHelp () {
   console.log('  $ wcag-validator <uri> --id=<id>')
   console.log('')
   console.log('Optional params')
-  console.log('See http://achecker.ca/documentation/web_service_api.php for more')
+  console.log('See https://achecker.ca/documentation/web_service_api.php for more')
   console.log(msg)
 }
 
