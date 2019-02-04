@@ -1,6 +1,6 @@
 {
   "name": "wcag-validator",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Check accessibility using achecker.ca",
   "author": {
     "name": "Geir Gåsodden",
