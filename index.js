@@ -27,11 +27,7 @@ module.exports = async function (options) {
     throw new Error('Missing required param: id')
   }
 
-  try {
-    const url = makeUrl(options)
-    const { data } = await axios(url)
-    return data
-  } catch (error) {
-    throw error
-  }
+  const url = makeUrl(options)
+  const { data } = await axios(url)
+  return data
 }
