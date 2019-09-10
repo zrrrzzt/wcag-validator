@@ -12,7 +12,7 @@
     "wcag-validator": "cli.js"
   },
   "engines": {
-    "node": ">=10.15.1"
+    "node": ">=10.16.3"
   },
   "scripts": {
     "test": "standard && tap --reporter=spec test/*.js",
