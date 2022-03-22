@@ -37,7 +37,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "0.26.1",
-    "minimist": "1.2.5",
+    "minimist": "1.2.6",
     "valid-url": "1.0.9"
   },
   "devDependencies": {
