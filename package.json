@@ -36,7 +36,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "axios": "0.26.1",
+    "axios": "0.27.2",
     "minimist": "1.2.6",
     "valid-url": "1.0.9"
   },
